@@ -18,14 +18,13 @@ A node is an individual computer or device that participates in a blockchain net
 
 Refer to the table below for network support using Stackup hosted services.
 
-| Network             | Supported |
-| ------------------- | --------- |
-| Ethereum            | ✅        |
-| Goerli              | ✅        |
-| Polygon             | ✅        |
-| Mumbai              | ✅        |
-| Avalanche           | 🔜        |
-| Optimism            | 🔜        |
-| Arbitrum            | 🔜        |
-| Gnosis chain        | 🔜        |
-| Binance Smart Chain | 🔜        |
+| Network         | Supported |
+| --------------- | --------- |
+| Ethereum        | ✅        |
+| Goerli          | ✅        |
+| Polygon         | ✅        |
+| Mumbai          | ✅        |
+| Optimism        | 🔜        |
+| Goerli Optimism | 🔜        |
+| Avalanche       | 🔜        |
+| Avalanche Fuji  | 🔜        |
