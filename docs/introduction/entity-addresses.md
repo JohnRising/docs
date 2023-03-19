@@ -40,5 +40,5 @@ These are the official [PAYG](../api/paymaster/introduction#payg-pay-as-you-go) 
 | [0x6b138aa2989E60B25b305528D7C91DD2C8cb756c](https://snowtrace.io/address/0x6b138aa2989E60B25b305528D7C91DD2C8cb756c)                 | Avalanche       |
 | [0x7122EDe4e3823387a69F42193baD1409BfD97AC8](https://goerli.etherscan.io/address/0x7122EDe4e3823387a69F42193baD1409BfD97AC8)          | Goerli          |
 | [0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6](https://mumbai.polygonscan.com/address/0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6)       | Mumbai          |
-| [0x24E7Aff09519323a96e4CD9f6cd14Fbdb48aDD7C](https://goerli-optimism.etherscan.io/address/0x24E7Aff09519323a96e4CD9f6cd14Fbdb48aDD7C) | Goerli Optimism |
+| [0x24E7Aff09519323a96e4CD9f6cd14Fbdb48aDD7C](https://goerli-optimism.etherscan.io/address/0x24E7Aff09519323a96e4CD9f6cd14Fbdb48aDD7C) | Optimism Goerli |
 | [0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6](https://testnet.snowtrace.io/address/0xFE7dBcAb8AaeE4eB67943c1e6BE95B1D065985c6)         | Avalanche Fuji  |

@@ -25,6 +25,6 @@ Refer to the table below for network support using Stackup hosted services.
 | Polygon         | ✅        |
 | Mumbai          | ✅        |
 | Optimism        | 🔜        |
-| Goerli Optimism | 🔜        |
+| Optimism Goerli | 🔜        |
 | Avalanche       | 🔜        |
 | Avalanche Fuji  | 🔜        |
