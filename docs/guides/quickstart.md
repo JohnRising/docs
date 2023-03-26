@@ -58,7 +58,7 @@ You can create a free bundler instance at [app.stackup.sh](https://app.stackup.s
 
 ![Copy the bundler instance URL from the Stackup app](../../static/img/copy-bundler-url.png)
 
-The `rpcUrl` can be set to any network node. Stackup's bundler also runs a full node, so you can send any normal RPC requests to it as well. In this example we'll set the `bundlerUrl` and `rpcUrl` to the same endpoint.
+You also need to set the `rpcUrl`. Set the `rpcUrl` to the same url as the `bundlerUrl`. Stackup's bundler also runs a full node, so you can send any normal RPC requests to it as well. If you want to use a different endpoint, `rpcUrl` can be set to any network node.
 
 Your `config.json` fill will now look like this:
 
@@ -98,7 +98,7 @@ Faucets do not send directly to smart contracts. You must deposit ETH or ERC-20 
 
 ## 6. Initiate the transfer
 
-The `simpleAccount transfer` command allows you to transfer MATIC from the smart contract account to any address. It will create a user operation, sign it, and send it to the bundler:
+The `simpleAccount transfer` command allows you to transfer ETH from the smart contract account to any address. It will create a user operation, sign it, and send it to the bundler:
 
 ```
 yarn run simpleAccount transfer --to <address> --amount <eth>
@@ -106,46 +106,33 @@ yarn run simpleAccount transfer --to <address> --amount <eth>
 
 You can then find the transaction using a block explorer like [etherscan](https://goerli.etherscan.io/).
 
-### With a paymaster
+### Troubleshooting
 
-All commands also have a optional `--withPaymaster` flag. This will send your user operations to the `paymasterUrl` specified in your config. If you are using Stackup's paymaster, the `paymasterUrl` will be the same as the `bundlerUrl` but at the paymaster endpoint.
+While using this quickstart example, you may encounter these common error messages.
 
-For example, if `bundlerUrl` is:
+- `AA21 didn't pay prefund` is an error from the bundler that indicates that the account does not have enough funds. This usually means that you did not fund your account in step 5.
 
-```
-"bundlerUrl" = "https://node.stackup.sh/v1/rpc/<API key>"
-```
+- `400 bad request: invalid tracer value` or `This method is not whitelisted` are responses that you may get if you are running your own bundler locally and using an external node provider. Most node providers do not support the custom tracing that bundlers need. Either run your own local node or use Stackup's bundler service.
 
-Then your `paymasterUrl` is:
-
-```
-"paymasterUrl" = "https://app.stackup.sh/api/v2/paymaster/payg/<API key>"
-```
-
-Regardless of whether you use Stackup's paymaster service or not, the endpoint is expected to implement a standard [JSON-RPC interface](../api/paymaster/rpc-methods) and return back a `paymasterAndData` field if it agrees to sponsor your transaction.
-
-**With this option, you can execute any transaction without needing to hold ETH or MATIC for gas fees.**
-
-```
-yarn run simpleAccount transfer --to <address> --amount <eth> --withPaymaster
-```
-
-:::info
-
-If you are on a Stackup developer plan, you can get quick access to our hosted [Paymaster APIs](../api/paymaster/introduction#stackup-paymaster-api).
-
-:::
+- `entryPoint: Implementation not supported` means that the bundler being used for the transaction does not support the selected Entry Point. If you are using a Stackup bundler, we recommend setting your bundler instance to the latest version and the canonical Entry Point contract.
 
 ## Next Steps
 
-You've successfully sent a transaction using a smart contract account and ERC-4337. Now that you've done a simple transfer with your account, you can also check out other commands in the example, or check out some SDKs compatible with Stackup.
+You've successfully sent a transaction using a smart contract account and ERC-4337! Now that you've done a simple transfer with your account, you can begin working with ERC-4337.
 
-### Third Party SDKs
+Here are some things for you to explore:
 
-- [ZeroDev](https://www.zerodev.app/) is a smart contract wallet framework that greatly simplifies the implementation of smart contract accounts for wallets and dapps. View their [getting started guide](https://docs.zerodev.app/get-started) to create an example React app.
+- Try sponsoring a transaction with the [Paymaster Example](/docs/guides/paymaster-example)
+- Read the code in the quickstart repository and see some more examples:
+  - [Transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
+  - [Batch transfer ETH](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
+  - [Batch transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
+- Explore some account contract samples developed by the Ethereum Foundation on [GitHub](https://github.com/eth-infinitism/account-abstraction/tree/develop/contracts/samples)
+- Showcase your ERC-4337 account with the [Trampoline](https://github.com/plusminushalf/trampoline-example/tree/fingerprint) chrome extension template.
+- See this [list of more account abstraction resources](/docs/introduction/more-resources).
+- Explore third party SDKs, such as:
+  - [ZeroDev](https://www.zerodev.app/), a smart contract wallet framework that greatly simplifies the implementation of smart contract accounts for wallets and dapps. View their [getting started guide](https://docs.zerodev.app/getting-started) to create an example React app.
 
-### Examples
+### Wondering what account abstraction means for your company?
 
-- [Transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
-- [Batch transfer ETH](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
-- [Batch transfer ERC-20 tokens](https://github.com/stackup-wallet/erc-4337-examples#transfer-erc-20-token)
+You may be interested in a [Discovery package](https://www.stackup.sh/discovery).
