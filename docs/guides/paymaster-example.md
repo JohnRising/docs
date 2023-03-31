@@ -115,7 +115,11 @@ Regardless of whether you use Stackup's paymaster service or not, the endpoint i
 The `simpleAccount erc20Transfer` command allows you to transfer ETH from the smart contract account to any address. It will create a user operation, sign it, and send it to the bundler:
 
 ```
-yarn run simpleAccount erc20Transfer --token <address> --to <address> --amount <decimal>
+yarn run simpleAccount erc20Transfer
+     --token <address>
+     --to <address>
+     --amount <decimal>
+     --withPaymaster
 ```
 
 Set the `--token` address to the address of the ERC-20 token. You can get this address from a block explorer like [etherscan](https://goerli.etherscan.io/). The `--to` address is the address you will send the tokens to, and set `--amount` to the number of ERC-20 tokens you want to transfer.
