@@ -12,7 +12,7 @@ Returns logs of a UserOperation.
 ### Endpoint
 
 ```
-GET /v1/useroperation/:useropHash/logs
+GET api.stackup.sh/v1/useroperation/:useropHash/logs
 ```
 
 ### Parameters
@@ -44,4 +44,15 @@ A hash with a data property that contains an array of logs.
     }
   ]
 }
+```
+
+### Examples
+
+##### Retrieve logs for a UserOperation
+
+```bash
+curl --request GET \
+  --url https://api.stackup.sh/v1/useroperation/0xab49e93fcc6f1fc11f4268d90a45a4be0d5319acd605c84185bd23f04343bc77/logs  \
+  --header 'su-access-key: <api_key>'
+
 ```

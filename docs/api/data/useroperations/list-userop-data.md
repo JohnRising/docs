@@ -10,7 +10,7 @@ Returns a list of [UserOperation data objects](./the-useropdata-object).
 ### Endpoint
 
 ```
-GET /v1/useroperations
+GET api.stackup.sh/v1/useroperations
 ```
 
 ### Parameters
@@ -112,4 +112,24 @@ A hash with a data property that contains an array [UserOperation data objects](
     }
   ]
 }
+```
+
+### Examples
+
+##### Get all UserOperations by sender
+
+```bash
+curl --request GET \
+  --url https://api.stackup.sh/v1/useroperations?sender=0x9Cf68EFEec94fd3de2110b0307DFCbfF0D3B7bB5 \
+  --header 'su-access-key: <api_key>'
+
+```
+
+##### Get all UserOperations between a date range
+
+```bash
+curl --request GET \
+  --url https://api.stackup.sh/v1/useroperations?to=2023-04-07T00%3A00%3A00.000Z&from=2023-04-06T00%3A00%3A00.000Z \
+  --header 'su-access-key: <api_key>'
+
 ```

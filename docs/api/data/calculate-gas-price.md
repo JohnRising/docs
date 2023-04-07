@@ -10,7 +10,7 @@ Returns the total sponsored gas in USD. One of `sender`, `bundler` or `paymaster
 ### Endpoint
 
 ```
-GET /v1/calculate-gas-sponsored
+GET api.stackup.sh/v1/calculate-gas-sponsored
 ```
 
 ### Parameters
@@ -74,4 +74,15 @@ the calculated total sponsored gas cost and a `transactions` property that conta
     ]
   }
 }
+```
+
+### Examples
+
+##### Calculate the gas sponsored for a sender during a date range
+
+```bash
+curl --request GET \
+  --url https://api.stackup.sh/v1/calculate-gas-price?sender=0x9Cf68EFEec94fd3de2110b0307DFCbfF0D3B7bB5&to=2023-04-07T00%3A00%3A00.000Z&from=2023-04-06T00%3A00%3A00.000Z \
+  --header 'su-access-key: <api_key>'
+
 ```

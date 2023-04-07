@@ -12,7 +12,7 @@ Returns a [UserOperation data object](./the-useropdata-object).
 ### Endpoint
 
 ```
-GET /v1/useroperation/:useropHash
+GET api.stackup.sh/v1/useroperation/:useropHash
 ```
 
 ### Parameters
@@ -44,4 +44,15 @@ Returns a list of `UserOperation log` objects. If the call fails it returns an `
     }
   ]
 }
+```
+
+### Examples
+
+##### Retrieve a UserOperations by userOperationHash
+
+```bash
+curl --request GET \
+  --url https://api.stackup.sh/v1/useroperation/0xab49e93fcc6f1fc11f4268d90a45a4be0d5319acd605c84185bd23f04343bc77 \
+  --header 'su-access-key: <api_key>'
+
 ```

@@ -9,10 +9,10 @@ The UserOperation data object contains the user operation that was sent and info
 
 ### Endpoints
 
-| Endpoint                          | Description              |
-| --------------------------------- | ------------------------ |
-| GET /v1/useroperations            | List UserOperations      |
-| GET /v1/useroperation/:useropHash | Retrieve a UserOperation |
+| Endpoint                                        | Description              |
+| ----------------------------------------------- | ------------------------ |
+| GET api.stackup.sh/v1/useroperations            | List UserOperations      |
+| GET api.stackup.sh/v1/useroperation/:useropHash | Retrieve a UserOperation |
 
 ### Example UserOperation data object
 

@@ -10,7 +10,7 @@ Returns a transaction receipt made by a bundler.
 ### Endpoints
 
 ```
-GET /v1/transaction/:transactionHash
+GET api.stackup.sh/v1/transaction/:transactionHash
 ```
 
 ### Parameters
@@ -103,4 +103,15 @@ A hash with a data property that contains an array of logs.
     }
   ]
 }
+```
+
+### Examples
+
+##### Retrieve a transaction receipt for a UserOperation
+
+```bash
+curl --request GET \
+  --url https://api.stackup.sh/v1/transaction/0xdbd3d3147e3e0442b14e340cadbe3040b22b1c08801d25ed1a2f7de867160b48  \
+  --header 'su-access-key: <api_key>'
+
 ```
