@@ -13,7 +13,7 @@ Explore a basic implementation of account abstraction using ERC-4337. This examp
 If you are new to account abstraction, we recommend the [introduction to account abstraction](/docs/introduction/account-abstraction) and an [overview of ERC-4337](/docs/introduction/erc-4337-overview).
 
 :::caution
-The video uses an old version of the examples repo. Follow the written instructions below the video. Use the video for informational purposes only.
+This video is of an **old version** of the examples repo. Follow the written instructions presented in this guide, not the commands in the video.
 :::
 
 <div align="center" width="100%" class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/zvnm2GnMAts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
